@@ -1,0 +1,4 @@
+/usr/bin/nano
+/lib/ld-musl-x86_64.so.1
+/usr/lib/libncursesw.so.6
+/etc/terminfo

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+file=/etc/unlock.txt
+
+while read device name; do
+    echo $name
+    if [ -b /dev/mapper/$name ]; then
+        continue
+    fi
+    eval `blkid $device|cut -d: -f2`
+    passphrase=`python3 /opt/eckdf.py $UUID`
+    cryptsetup luksOpen --key-file <(echo -n $passphrase) $device $name
+done < $file
+

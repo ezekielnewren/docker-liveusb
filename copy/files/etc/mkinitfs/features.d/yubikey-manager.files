@@ -1,0 +1,55 @@
+# apk info --depends yubikey-manager
+# yubikey-manager-5.2.1-r0 depends on:
+# ccid
+# pcsc-lite
+# pcsc-lite-libs
+# py3-click
+# py3-cryptography
+# py3-fido2
+# py3-keyring
+# py3-pyscard
+# py3-ykman
+# python3
+# yubico-c
+
+/usr/bin/ykman
+/etc/reader.conf.d/libccidtwin
+/etc/ssl/
+/usr/bin/2to3
+/usr/bin/2to3-3.11
+/usr/bin/keyring
+/usr/bin/pcsc-spy
+/usr/bin/pydoc3
+/usr/bin/pydoc3.11
+/usr/bin/python
+/usr/bin/python3
+/usr/bin/python3.11
+/usr/include/python3.11/pyconfig.h
+/usr/lib/libpcsclite.so
+/usr/lib/libpcsclite.so.1
+/usr/lib/libpcsclite.so.1.0.0
+/usr/lib/libpython3.11.so.1.0
+/usr/lib/libpython3.so
+/usr/lib/libyubikey.so.0
+/usr/lib/libyubikey.so.0.1.7
+/usr/lib/pcsc/
+/usr/lib/pcsc/drivers/ifd-ccid.bundle/Contents/Info.plist
+/usr/lib/pcsc/drivers/ifd-ccid.bundle/Contents/Linux/libccid.so
+/usr/lib/pcsc/drivers/serial/libccidtwin.so
+/usr/lib/udev/rules.d/92_pcscd_ccid.rules
+/usr/sbin/pcscd
+## libcrypto3
+/lib/libcrypto.so.3
+/usr/lib/libcrypto.so.3
+/usr/lib/engines-3/afalg.so
+/usr/lib/engines-3/capi.so
+/usr/lib/engines-3/loader_attic.so
+/usr/lib/engines-3/padlock.so
+/usr/lib/ossl-modules/legacy.so
+## libssl3
+/lib/libssl.so.3
+/usr/lib/libssl.so.3
+
+## eckdf.py
+/opt/eckdf.py
+

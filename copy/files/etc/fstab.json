@@ -1,0 +1,15 @@
+{
+  "/": {
+    "type": "ext4",
+    "device": "ROOT_UUID",
+    "fde": {
+      "type": "crypto_LUKS",
+      "device": "FDE_UUID",
+      "name": "FDE_NAME"
+    }
+  },
+  "/boot": {
+    "type": "vfat",
+    "device": "BOOT_UUID"
+  }
+}
