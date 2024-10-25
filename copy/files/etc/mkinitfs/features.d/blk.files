@@ -1,5 +1,0 @@
-/sbin/blkid
-/lib/libblkid.so.1
-/bin/lsblk
-/lib/libmount.so.1
-/lib/libsmartcols.so.1

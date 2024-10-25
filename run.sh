@@ -1,13 +1,13 @@
 #!/bin/bash
 
-docker build -t alpine-grub-luks --network=host .
+docker build -t rockylive --network=host .
 
-name=alpine-build
+name=rockylive-build
 
 docker rm -f $name
 if [ "$1" == "" ]; then
-    docker run --name $name -it --rm -v /tmp:/tmp -v /dev:/dev -w /root --network=host --privileged alpine-grub-luks
+    docker run --name $name -it --rm -v /tmp:/tmp -v /dev:/dev -w /root --network=host --privileged rockylive
 else
-    docker run --name $name -it --rm -v /tmp:/tmp -v /dev:/dev -w /root --network=host --privileged alpine-grub-luks "$1"
+    docker run --name $name -it --rm -v /tmp:/tmp -v /dev:/dev -w /root --network=host --privileged rockylive "$1"
 fi
 

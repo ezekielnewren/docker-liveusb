@@ -1,8 +1,0 @@
-#!/bin/bash
-
-mkdir -p /usr/share/mkinitfs
-cmd="cp /etc/mkinitfs/init /usr/share/mkinitfs/initramfs-init"
-echo $cmd
-eval $cmd
-mkinitfs `ls /lib/modules`
-
