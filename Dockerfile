@@ -11,6 +11,6 @@ COPY copy /copy
 # RUN dnf install -y losetup
 # RUN apk add nano file losetup alpine-conf squashfs-tools efibootmgr rsync cpio
 
-ENTRYPOINT ["dumb-init"]
+ENTRYPOINT ["dumb-init", "--", "bash", "-c"]
 CMD ["bash"]
 

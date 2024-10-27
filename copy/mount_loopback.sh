@@ -20,7 +20,7 @@ if [ $(losetup -a | grep -c /tmp/build/usb.img) -gt 0 ]; then
 fi
 
 export BLOCK_DEVICE=$(losetup -Pf --show $image) || exit $?
-trap cleanup SIGINT
+trap cleanup SIGINT SIGTERM
 
 $cmd "${@:3}"
 

@@ -10,7 +10,8 @@ fi
 
 
 install_mandatory() {
-    apk add jq blkid grub-efi sgdisk dosfstools lsblk e2fsprogs findutils cryptsetup rsync
+    # apk add jq blkid grub-efi sgdisk dosfstools lsblk e2fsprogs findutils cryptsetup rsync
+    dnf install -y wget grub2-efi parted jq grubby gdisk dosfstools e2fsprogs findutils cryptsetup rsync
     ## findutils contains xargs which is required for auto unmounting
 }
 export install_mandatory
