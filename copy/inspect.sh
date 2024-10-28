@@ -30,6 +30,8 @@ if [ ! -d "$mountpoint" ]; then
     exit 1
 fi
 
+trap cleanup SIGINT SIGTERM
+
 # mount partitions
 if [ "$BLOCK_DEVICE" != "" ]; then
     if [ ! -b "$BLOCK_DEVICE" ]; then
@@ -38,16 +40,10 @@ if [ "$BLOCK_DEVICE" != "" ]; then
     fi
 
     mount $(partition $BLOCK_DEVICE 2) $mountpoint
-    mount $(partition $BLOCK_DEVICE 2) $mountpoint/boot
+    mount $(partition $BLOCK_DEVICE 1) $mountpoint/boot
 fi
 
-# mount special filesystems
-mount --bind /proc $mountpoint/proc/
-mount --bind /sys $mountpoint/sys/
-mount --bind /dev $mountpoint/dev/
-trap cleanup SIGINT
-
-chroot $mountpoint /bin/ash -l
+PS1="\e[31mINSPECT\e[0m:\w# " bash
 
 cleanup
 
