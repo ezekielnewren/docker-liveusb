@@ -9,13 +9,6 @@ if [ $(echo $PATH | grep -c $parent) -eq 0 ]; then
 fi
 
 
-install_mandatory() {
-    # apk add jq blkid grub-efi sgdisk dosfstools lsblk e2fsprogs findutils cryptsetup rsync
-    dnf install -y wget grub2-efi parted jq grubby gdisk dosfstools e2fsprogs findutils cryptsetup rsync
-    ## findutils contains xargs which is required for auto unmounting
-}
-export install_mandatory
-
 DEBUG() {
     echo "exit shell to continue"
     PS1="\e[31mDEBUG\e[0m:\w# " bash

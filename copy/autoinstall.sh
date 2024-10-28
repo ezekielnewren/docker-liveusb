@@ -65,9 +65,6 @@ else
     cd $BUILD_DIR
 fi
 
-info "install mandatory software"
-install_mandatory
-
 # https://dl-cdn.alpinelinux.org/alpine/v3.17/releases/x86_64/alpine-extended-3.17.1-x86_64.iso
 
 # https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-minimal.iso
